@@ -1,0 +1,136 @@
+/* TRACK_DAY — sample tyre brand website */
+:root {
+  --black: #101110;
+  --panel: #191b19;
+  --white: #f3f2ed;
+  --muted: #a5a69f;
+  --lime: #d6ff36;
+  --line: rgba(255,255,255,.13);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--black); color: var(--white); font-family: "DM Sans", sans-serif; }
+a { color: inherit; text-decoration: none; }
+.announcement { padding: 10px 5vw; background: var(--lime); color: #111; text-align: center; font-size: 10px; font-weight: 800; letter-spacing: 1.8px; }
+.announcement span { font-weight: 500; }
+.site-header { height: 86px; padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); position: relative; z-index: 5; background: var(--black); }
+.brand { display: flex; align-items: center; gap: 10px; font-family: "Barlow Condensed", sans-serif; font-size: 25px; line-height: .8; font-weight: 900; letter-spacing: -.5px; }
+.brand-mark { width: 36px; height: 36px; display: grid; place-items: center; background: var(--lime); color: #111; font-size: 25px; transform: skew(-10deg); }
+.brand-accent { color: var(--lime); }
+.brand small { display: block; margin-top: 7px; font: 700 8px "DM Sans", sans-serif; letter-spacing: 2.2px; color: var(--muted); }
+.main-nav { display: flex; gap: 38px; }
+.main-nav a, .header-cta { font-size: 10px; font-weight: 700; letter-spacing: 1.4px; }
+.main-nav a { color: #c8c9c3; transition: color .2s; }
+.main-nav a:hover, .text-link:hover { color: var(--lime); }
+.header-cta { border: 1px solid var(--line); padding: 14px 18px; }
+.header-cta span, .button span { color: var(--lime); margin-left: 12px; }
+.menu-toggle { display: none; background: none; color: white; border: 0; font-size: 24px; }
+.hero { min-height: 650px; height: min(760px, 78vw); position: relative; display: flex; align-items: center; overflow: hidden; background: #222 url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2200&q=85") center 55%/cover no-repeat; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,10,9,.96) 0%, rgba(8,10,9,.76) 43%, rgba(8,10,9,.12) 100%), linear-gradient(0deg, rgba(8,10,9,.5), transparent 50%); }
+.hero-content { position: relative; z-index: 1; margin-left: 10vw; max-width: 590px; padding: 80px 0; }
+.eyebrow, .section-kicker { font-size: 10px; font-weight: 700; letter-spacing: 2px; color: var(--muted); }
+.eyebrow { display: flex; align-items: center; gap: 10px; }
+.eyebrow span { width: 22px; height: 2px; background: var(--lime); }
+h1, h2, h3 { font-family: "Barlow Condensed", sans-serif; margin: 0; font-weight: 900; letter-spacing: -.8px; }
+.hero h1 { font-size: clamp(86px, 12vw, 166px); line-height: .78; margin: 34px 0 30px; }
+h1 em, h2 em { color: var(--lime); font-style: normal; }
+.hero-copy { max-width: 390px; color: #c3c4bd; font-size: 14px; line-height: 1.8; }
+.hero-actions { display: flex; align-items: center; gap: 28px; margin-top: 34px; }
+.button { display: inline-flex; align-items: center; padding: 17px 20px; font-size: 10px; font-weight: 800; letter-spacing: 1.3px; }
+.button-primary { background: var(--lime); color: #101110; }
+.button-primary span { color: #101110; }
+.text-link { font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+.text-link span { color: var(--lime); margin-left: 8px; }
+.hero-meta { position: absolute; bottom: 36px; left: 10vw; z-index: 1; display: flex; align-items: center; gap: 14px; font-size: 9px; letter-spacing: 1.5px; color: #d0d1ca; }
+.meta-line { width: 55px; height: 1px; background: var(--lime); }
+.vertical-label { position: absolute; right: 4vw; bottom: 45px; writing-mode: vertical-rl; font-size: 9px; letter-spacing: 2px; color: #ddd; }
+.ticker { overflow: hidden; background: var(--lime); color: #111; white-space: nowrap; padding: 17px 0; font-family: "Barlow Condensed", sans-serif; font-size: 19px; font-weight: 800; letter-spacing: 1.8px; }
+.ticker div { min-width: max-content; text-align: center; }
+.ticker b { margin: 0 32px; }
+.section-wrap { max-width: 1240px; width: 82%; margin: auto; }
+.intro { padding: 115px 0 125px; }
+.section-kicker { color: var(--lime); }
+.intro-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 8%; margin-top: 35px; align-items: end; }
+h2 { font-size: clamp(55px, 7vw, 92px); line-height: .86; }
+h2 span { color: var(--lime); }
+.intro-text { max-width: 420px; color: #b7b8b1; font-size: 13px; line-height: 1.9; }
+.underlined-link { display: inline-block; margin-top: 20px; padding-bottom: 9px; border-bottom: 1px solid var(--lime); color: var(--white); font-size: 9px; font-weight: 800; letter-spacing: 1px; }
+.underlined-link b { color: var(--lime); margin-left: 16px; }
+.tyres-section { padding: 105px 0 100px; background: #171917; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 45px; }
+.section-heading h2 { margin-top: 22px; }
+.section-heading > p { color: var(--muted); font-size: 12px; line-height: 1.8; }
+.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.product-card { background: #202320; border: 1px solid rgba(255,255,255,.07); }
+.product-card.featured { border-color: rgba(214,255,54,.55); }
+.product-image { height: 270px; position: relative; overflow: hidden; display: grid; place-items: center; background: radial-gradient(circle at 50% 48%, #454a42 0, #292d28 33%, #1c1f1c 70%); }
+.product-image:after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 40%, rgba(0,0,0,.35)); }
+.product-tag { position: absolute; z-index: 2; top: 18px; left: 18px; font-size: 8px; letter-spacing: 1.3px; font-weight: 700; color: var(--lime); }
+.product-number { position: absolute; z-index: 2; right: 18px; bottom: 12px; font: 800 38px "Barlow Condensed"; color: rgba(255,255,255,.2); }
+.tyre-art { width: 185px; height: 185px; border-radius: 50%; border: 17px solid #101110; outline: 5px solid #3a3d37; box-shadow: inset 0 0 0 5px #30342e, 0 22px 35px rgba(0,0,0,.5); transform: rotate(-22deg); position: relative; }
+.tyre-art:before { content: ""; position: absolute; inset: 5px; border-radius: 50%; border: 3px dashed #5d6258; }
+.tyre-art:after { content: "TRACK_DAY"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(90deg); font: 800 9px "DM Sans"; letter-spacing: 2px; color: #8b9084; white-space: nowrap; }
+.tyre-two { background: radial-gradient(circle at 50% 48%, #505744 0, #292e25 36%, #1c1f1c 72%); }
+.tyre-two .tyre-art { width: 205px; height: 205px; border-width: 22px; outline-color: var(--lime); }
+.tyre-three { background: radial-gradient(circle at 50% 48%, #454a50 0, #292d30 36%, #1c1f1c 72%); }
+.product-info { padding: 22px 20px 18px; display: flex; justify-content: space-between; align-items: center; }
+.product-info h3 { font-size: 27px; letter-spacing: .3px; }
+.product-info p { margin: 6px 0 0; font-size: 10px; color: var(--muted); }
+.product-info > a { width: 35px; height: 35px; display: grid; place-items: center; border: 1px solid var(--line); color: var(--lime); font-size: 18px; }
+.product-spec { display: flex; gap: 13px; padding: 0 20px 20px; color: #777d73; font-size: 7px; font-weight: 700; letter-spacing: .8px; }
+.disclaimer { margin: 20px 0 0; color: #777d73; font-size: 9px; }
+.technology { padding: 125px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10%; align-items: center; }
+.tech-visual { min-height: 430px; background: radial-gradient(circle at 50% 45%, #41483a, #1a1d19 65%); position: relative; display: grid; place-items: center; overflow: hidden; }
+.tech-ring { width: 280px; height: 280px; border-radius: 50%; border: 25px solid #101210; outline: 1px solid var(--lime); box-shadow: inset 0 0 0 5px #50574a, 0 0 0 18px rgba(214,255,54,.05), 0 30px 60px #000; transform: rotate(-25deg); }
+.tech-caption { position: absolute; font: 900 30px/.9 "Barlow Condensed"; text-align: center; text-shadow: 0 2px 12px #000; }
+.tech-index { position: absolute; left: 20px; bottom: 20px; font-size: 8px; letter-spacing: 2px; color: var(--lime); }
+.tech-copy h2 { margin: 24px 0; }
+.tech-copy > p { color: var(--muted); font-size: 13px; line-height: 1.9; max-width: 440px; }
+.tech-points { margin-top: 30px; }
+.tech-points > div { display: flex; gap: 20px; padding: 17px 0; border-top: 1px solid var(--line); }
+.tech-points b { font: 700 16px "Barlow Condensed"; color: var(--lime); }
+.tech-points strong, .tech-points small { display: block; }
+.tech-points strong { font-size: 10px; letter-spacing: 1px; }
+.tech-points small { margin-top: 6px; color: var(--muted); font-size: 10px; }
+.cta-band { padding: 75px 9vw; background: var(--lime); color: #111; display: flex; align-items: center; justify-content: space-between; }
+.cta-band .eyebrow { color: #454d2d; }
+.cta-band h2 { font-size: clamp(55px, 7vw, 86px); margin-top: 20px; }
+.cta-band h2 em { color: #fff; }
+.button-light { background: #111; color: #fff; }
+.button-light span { color: var(--lime); }
+.footer { padding: 55px 9vw 25px; }
+.footer-brand .brand-accent { color: var(--lime); }
+.footer > p { margin: 35px 0 55px; font: 800 25px "Barlow Condensed"; letter-spacing: 1px; color: #8a8e84; }
+.footer-bottom { border-top: 1px solid var(--line); padding-top: 20px; display: flex; justify-content: space-between; color: #777d73; font-size: 8px; letter-spacing: 1px; }
+.footer-bottom a { color: var(--lime); }
+
+@media (max-width: 800px) {
+  .main-nav, .header-cta { display: none; }
+  .menu-toggle { display: block; }
+  .hero { min-height: 620px; background-position: 60% center; }
+  .hero-content { margin-left: 7vw; margin-right: 7vw; }
+  .hero h1 { font-size: clamp(82px, 18vw, 130px); }
+  .section-wrap { width: 86%; }
+  .intro-grid, .technology { grid-template-columns: 1fr; gap: 35px; }
+  .intro { padding: 85px 0; }
+  .product-grid { grid-template-columns: 1fr; }
+  .product-image { height: 300px; }
+  .technology { padding: 85px 0; }
+  .tech-visual { min-height: 350px; }
+  .section-heading { align-items: start; flex-direction: column; gap: 20px; }
+  .cta-band { padding: 65px 7vw; gap: 30px; align-items: start; flex-direction: column; }
+  .footer-bottom { gap: 14px; flex-wrap: wrap; }
+}
+@media (max-width: 480px) {
+  .announcement { font-size: 8px; letter-spacing: 1px; }
+  .site-header { height: 72px; }
+  .brand { font-size: 22px; }
+  .hero { min-height: 590px; }
+  .hero-content { padding-top: 45px; }
+  .hero-actions { align-items: flex-start; flex-direction: column; gap: 20px; }
+  .hero-meta { left: 7vw; bottom: 25px; }
+  .vertical-label { display: none; }
+  h2 { font-size: 58px; }
+  .product-spec { gap: 8px; font-size: 6px; }
+  .tech-ring { width: 220px; height: 220px; }
+}
